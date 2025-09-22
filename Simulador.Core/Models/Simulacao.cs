@@ -63,9 +63,7 @@ namespace Simulador.Core.Models
             Validar();
 
             var jurosMensais = Math.Pow(1 + (double)Produto.TaxaJurosAnual / 100.0, 1.0 / 12.0) - 1.0;
-
             var fator = jurosMensais / (1 - Math.Pow(1 + jurosMensais, -PrazoMeses));
-
             var parcelaMensal = (decimal)Math.Max(0.01,Math.Round((double)ValorSolicitado * fator, 2, MidpointRounding.AwayFromZero));
 
             TaxaJurosEfetivaMensal = (decimal)Math.Round(jurosMensais, 6, MidpointRounding.AwayFromZero);

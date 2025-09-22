@@ -2,3 +2,4 @@
 */obj
 coverage-report
 */*.db
+Simulador.Tests/TestResults/

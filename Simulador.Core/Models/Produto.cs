@@ -7,7 +7,7 @@ namespace Simulador.Core.Models
     {
         public const int NOME_COMPRIMENTO_MINIMO = 5;
         public const int NOME_COMPRIMENTO_MAXIMO = 50;
-        public const decimal TAXA_JUROS_MINIMA = 0.0m;
+        public const decimal TAXA_JUROS_MINIMA = 1.0m;
         public const decimal TAXA_JUROS_MAXIMA = 100.0m;
         public const int PRAZO_MINIMO = 1;
         public const int PRAZO_MAXIMO = 720;
@@ -39,7 +39,7 @@ namespace Simulador.Core.Models
             {
                 throw new SimuladorException(E_NOME_COMPRIMENTO_INVALIDO);
             }
-            if (TaxaJurosAnual < TAXA_JUROS_MINIMA || TaxaJurosAnual > TAXA_JUROS_MAXIMA)
+            if (TaxaJurosAnual <= TAXA_JUROS_MINIMA || TaxaJurosAnual > TAXA_JUROS_MAXIMA)
             {
                 throw new SimuladorException(E_TAXA_JUROS_INVALIDA);
             }

@@ -22,7 +22,7 @@ public class CoreTests(ITestOutputHelper helper)
     [Theory]
     [InlineData("x", 12, 18.0)]
     [InlineData("xxxxxxxxxxyyyyyyyyyyxxxxxxxxxxyyyyyyyyyyxxxxxxxxxxyyyyyyyyyy", 12, 18.0)]
-    [InlineData("Nome Valido", -1, 18.0)]
+    [InlineData("Nome Valido", -1, 0.0)]
     [InlineData("Nome Valido", -1, -18.0)]
     [InlineData("Nome Valido", 10, -18.0)]   
     [InlineData("Nome Valido", 10, 900.0)]   
